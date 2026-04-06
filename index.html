@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Megha 🌸</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div id="hearts-bg"></div>
+  <div id="sticker-layer"></div>
+
+  <audio id="bg-music" loop preload="auto">
+    <source src="music/background.mp3" type="audio/mpeg"/>
+  </audio>
+  <button class="music-btn" id="music-btn" onclick="toggleMusic()">🎵</button>
+  <div id="toast-area"></div>
+
+  <main class="stage">
+
+    <!-- STEP 1: ENVELOPE -->
+    <section class="step" id="step-envelope">
+      <div class="top-sticker">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTN6bjVuMGdjaGllNXc5Zm44eTlhYzFueTFwMGFwNzJtdGwydXBvYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/McOXfLCpYA6mAQkKDj/giphy.gif" alt="cute"/>
+      </div>
+      <p class="to-tag">✉ &nbsp; to: chokottir meye &nbsp; ✉</p>
+      <div class="envelope" id="envelope" onclick="openEnvelope()">
+        <div class="env-flap" id="env-flap"></div>
+        <div class="env-body">
+          <div class="env-lines"><span></span><span></span><span></span></div>
+          <div class="env-seal">♡</div>
+        </div>
+      </div>
+      <p class="hint-blink">tap to open 💌</p>
+      <p class="hint-sub">from: ParaNoid 🫣 → for: Megha 🌸🌸</p>
+    </section>
+
+    <!-- STEP 2: LETTER -->
+    <section class="step hidden" id="step-letter">
+      <div class="reaction-wrap">
+        <img id="reaction-gif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTN6bjVuMGdjaGllNXc5Zm44eTlhYzFueTFwMGFwNzJtdGwydXBvYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/McOXfLCpYA6mAQkKDj/giphy.gif" alt="reaction"/>
+      </div>
+
+      <div class="letter-card">
+        <div class="letter-meta">from: ParaNoid 🫣 &nbsp;·&nbsp;</div>
+        <h2 class="letter-title">hey Megha 🌸</h2>
+
+        <p class="letter-body">
+          jani tumi kom expressive , kom kotha bolo —<br/>
+          <em>but somossa nai</em>, ami achi boree kore debo. 🛠️<br/><br/>
+          tomr ja sob elomelo thoughts gulo just share koro amar sathe.<br/>
+          ami shunbo, bujhbo, bully korbo majhe majhe — <em>arrr thoda hashaabo </em>. 😌<br/><br/>
+          haan, ami besi bok bok kori toh tumi sunbee—<br/>
+          <span class="chat-quote">"tomar sathe kotha bolbona toh kar sathe bolbo" 🫠</span><br/><br/>
+          tumi amar <span class="highlight">safe place</span> 🫂<br/>
+          <span class="chat-quote">"when i kiss on your head, it means i really meant it, amar everyday er boring life a tumi ekta spice add korecho, aamar gan shona office jawa esb er madjhe tumi ekta shine enecho, amar seriousness er majhe tumi ektu hashi/moja enechoo...i don't know how to explain everything in words but i know it's real, last 1mnth aa you've changed everything in me, everyday when i look into your eyes i fall so deeply and i've no regrets for it, you're the 1st girl i ever felt so openn and with no overthinking and no insecurity. Idk when,how and where... i fall for you so badly but i wanna fall moree everyday every moment with you. Maybe i'm sounding so desperate and quick but i've trust in you i've believe in you and trust me it's not quick it's going as it is meant to be and i'm loving it everyy moment ❤️❤️ "</span><br/><br/>
+          jheel paar theke, metro station, buss a jawa theke ekstahe haath dhore hata, esbb moment, i meant those moments i care. Just pasee theko ... idc care about your ex's how they treated you or how you treat them but i swarnadip ghosh will love you they way you are as it is.<br/>
+          those moments metro te chumu, tomar hasi tomr sobta  — everything i meant —<br/>
+          <em>ami notice kori sob kichu</em> 👀<br/><br/>
+          <span class="highlight">Chokottir meye,</span>
+        </p>
+
+        <div class="love-question">I love you. 🌸</div>
+        <p class="sub-q">ebr tumi bolo —</p>
+
+        <div class="btn-row" id="btn-row">
+          <button class="btn-yes" id="btn-yes" onclick="sayYes()">i love you too 🥰</button>
+          <button class="btn-no"  id="btn-no"
+            onmouseover="runAway(this)"
+            ontouchstart="runAway(this)"
+            onclick="noClick()">i hate you 🙅</button>
+        </div>
+      </div>
+      <button class="back-link" onclick="goBack()">← wapas jao</button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
